@@ -18,28 +18,28 @@ function Jobs() {
           <div className="grid grid-cols-3 gap-1">
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={imageIcon} alt="" />
               Studio.jpg
             </a>
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={imageIcon} alt="" />
               vibes.jpg
             </a>
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={imageIcon} alt="" />
               art.jpg
             </a>
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit col-span-3"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit col-span-3"
             >
               <img src={imageIcon} alt="" />
               standing on business.jpg
@@ -56,7 +56,7 @@ function Jobs() {
           <br />
           <a
             href="https://typeform.com"
-            className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+            className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
           >
             <img src={chain} alt="" />
             Typeform.com
@@ -68,7 +68,7 @@ function Jobs() {
           <br />
           <a
             href="https://notion.so"
-            className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+            className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
           >
             <img src={chain} alt="" />
             Notion.so

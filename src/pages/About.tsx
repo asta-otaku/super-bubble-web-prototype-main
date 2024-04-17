@@ -14,28 +14,28 @@ function About() {
           <div className="flex gap-1 items-center flex-wrap">
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={imageIcon} alt="" />
               Whiteboard.jpg
             </a>
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={imageIcon} alt="" />
               Whiteboard.jpg
             </a>
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={imageIcon} alt="" />
               offsite.jpg
             </a>
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={imageIcon} alt="" />
               candid.jpg
@@ -47,21 +47,21 @@ function About() {
           <div className="flex gap-1 items-center flex-wrap">
             <a
               href="https://instagram.com"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={chain} alt="" />
               Instagram.com
             </a>
             <a
               href="https://youtube.com"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={chain} alt="" />
               Youtube.com
             </a>
             <a
               href="https://x.com"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={chain} alt="" />
               X.com
@@ -73,14 +73,14 @@ function About() {
           <div className="flex gap-1 items-center flex-wrap">
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={chain} alt="" />
               Terms of Service
             </a>
             <a
               href="#"
-              className="flex items-center gap-0.5 text-sm py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
+              className="flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl bg-[#FFFFFF33] w-fit"
             >
               <img src={chain} alt="" />
               Privacy Policy
