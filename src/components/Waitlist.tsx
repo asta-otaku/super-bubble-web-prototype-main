@@ -1,6 +1,6 @@
 import { useState } from "react";
 import back from "../assets/back.svg";
-import sub from "./sub.svg";
+import sub from "../assets/sub.png";
 import { LeftIcon, RightIcon } from "../assets/icons";
 
 const questions = [

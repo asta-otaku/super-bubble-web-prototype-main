@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import logo from "../assets/logo.svg";
 import back from "../assets/back.svg";
 import doc from "../assets/doc.svg";
-import subinv from "../assets/SubtractInv.svg";
+import subinv from "../assets/subinv.png";
 import message from "../assets/message4.svg";
 import mockone from "../assets/mock-one.svg";
 import mocktwo from "../assets/mock-two.svg";
