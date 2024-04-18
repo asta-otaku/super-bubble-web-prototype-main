@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import bluechain from "../assets/bluechain.svg";
 import chain from "../assets/chain.svg";
 import PreviewBox from "../components/PreviewBox";
 import Waitlist from "../components/Waitlist";
@@ -48,22 +49,27 @@ function About() {
 
   return (
     <div>
-      <div className={`pt-8 bg-white ${open && "blur-[2px]"}`}>
+      <div
+        onClick={() => setOpen(false)}
+        className={`pt-8 bg-white ${open && "blur-[2px]"}`}
+      >
         <Header />
         <div className="max-w-xs w-full px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[calc(80vh)]">
-          <article className="bg-secondary text-white p-3 rounded-2xl">
-            We're a small team of crafts people who believe art and technology
-            must mix. We're motivated by mission, craft, and people
+          <article className="bg-secondary pt-3 rounded-2xl">
+            <p className="text-white px-3">
+              We're a small team of crafts people who believe art and technology
+              must mix. We're motivated by mission, craft, and people
+            </p>
             <div
               data-aos-once="false"
               data-aos="fade-up"
-              className="flex gap-1 items-center flex-wrap"
+              className="flex gap-1 items-center flex-wrap px-3"
             >
               <button
                 onClick={() => handleTokenClick("token1", 1)}
                 className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token1"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -83,7 +89,7 @@ function About() {
                 onClick={() => handleTokenClick("token2", 1)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token2"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -103,7 +109,7 @@ function About() {
                 onClick={() => handleTokenClick("token3", 1)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token3"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -123,7 +129,7 @@ function About() {
                 onClick={() => handleTokenClick("token4", 1)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token4"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -140,68 +146,71 @@ function About() {
                 </div>
               </button>
             </div>
+            <div className="bubble-bottom mt-2">
+              {selectedToken1 === "token1" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                  alt="Whiteboarding"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+              {selectedToken1 === "token2" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
+                  alt="Locked in"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+              {selectedToken1 === "token3" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/offsite.webp"
+                  alt="Offsite"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+              {selectedToken1 === "token4" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/candid.webp"
+                  alt="Candid"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+            </div>
           </article>
 
-          <div className="bubble-bottom">
-            {selectedToken1 === "token1" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                alt="Whiteboarding"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token2" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
-                alt="Locked in"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token3" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/offsite.webp"
-                alt="Offsite"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token4" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/candid.webp"
-                alt="Candid"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-          </div>
-
-          <article className="bg-secondary text-white p-3 rounded-2xl">
-            Where to find us: <br />
+          <article className="bg-secondary pt-3 rounded-2xl">
+            <p className="text-white px-3">Where to find us:</p>
             <div
               data-aos-once="false"
               data-aos="fade-up"
-              className="flex flex-wrap items-center gap-1"
+              className="flex flex-wrap items-center gap-1 px-3"
             >
               <button
                 onClick={() => handleTokenClick("token1", 3)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken3 === "token1"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
                 <div className="tokenPill">
-                  <img className="tokenimg" src={chain} alt="Token" />
+                  <img
+                    className="tokenimg"
+                    src={selectedToken3 === "token1" ? bluechain : chain}
+                    alt="Token"
+                  />
 
                   <span>Instagram.com</span>
                 </div>
@@ -210,12 +219,16 @@ function About() {
                 onClick={() => handleTokenClick("token2", 3)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken3 === "token2"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
                 <div className="tokenPill">
-                  <img className="tokenimg" src={chain} alt="Token" />
+                  <img
+                    className="tokenimg"
+                    src={selectedToken3 === "token2" ? bluechain : chain}
+                    alt="Token"
+                  />
 
                   <span>X.com</span>
                 </div>
@@ -224,68 +237,75 @@ function About() {
                 onClick={() => handleTokenClick("token3", 3)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken3 === "token3"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
                 <div className="tokenPill">
-                  <img className="tokenimg" src={chain} alt="Token" />
+                  <img
+                    className="tokenimg"
+                    src={selectedToken3 === "token3" ? bluechain : chain}
+                    alt="Token"
+                  />
 
                   <span>Youtube.com</span>
                 </div>
               </button>
             </div>
+            <div className="bubble-bottom mt-2">
+              {selectedToken3 === "token1" && (
+                <PreviewBox
+                  imageURL=""
+                  logoURL="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
+                  ItemURL="https://www.instagram.com/tyyyyyyyyyyypo/"
+                  websiteName="Typo* on Instagram"
+                  description="A more ~editorial~ pov"
+                />
+              )}
+
+              {selectedToken3 === "token2" && (
+                <PreviewBox
+                  imageURL=""
+                  logoURL="https://abs.twimg.com/responsive-web/client-web/icon-svg.ea5ff4aa.svg"
+                  ItemURL="https://twitter.com/tyyyyyyyyyyypo"
+                  websiteName="Typo on x.com"
+                  description="Sometimes we create moodboards, sometimes we'll have product updates here."
+                />
+              )}
+
+              {selectedToken3 === "token3" && (
+                <PreviewBox
+                  imageURL=""
+                  logoURL="https://www.youtube.com/s/desktop/28b0985e/img/favicon_144x144.png"
+                  ItemURL="https://www.youtube.com/@tyyyyyyyyyyypo/videos"
+                  websiteName="Typo* on Youtube"
+                  description="Checkout our vlogs for a bts look at how we're building the company."
+                />
+              )}
+            </div>
           </article>
 
-          <div className="bubble-bottom">
-            {selectedToken3 === "token1" && (
-              <PreviewBox
-                imageURL=""
-                logoURL="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
-                ItemURL="https://www.instagram.com/tyyyyyyyyyyypo/"
-                websiteName="Typo* on Instagram"
-                description="A more ~editorial~ pov"
-              />
-            )}
-
-            {selectedToken3 === "token2" && (
-              <PreviewBox
-                imageURL=""
-                logoURL="https://abs.twimg.com/responsive-web/client-web/icon-svg.ea5ff4aa.svg"
-                ItemURL="https://twitter.com/tyyyyyyyyyyypo"
-                websiteName="Typo on x.com"
-                description="Sometimes we create moodboards, sometimes we'll have product updates here."
-              />
-            )}
-
-            {selectedToken3 === "token3" && (
-              <PreviewBox
-                imageURL=""
-                logoURL="https://www.youtube.com/s/desktop/28b0985e/img/favicon_144x144.png"
-                ItemURL="https://www.youtube.com/@tyyyyyyyyyyypo/videos"
-                websiteName="Typo* on Youtube"
-                description="Checkout our vlogs for a bts look at how we're building the company."
-              />
-            )}
-          </div>
-
-          <article className="bg-secondary text-white p-3 rounded-2xl">
-            Obligatory legal stuff: <br />
+          <article className="bg-secondary pt-3 rounded-2xl">
+            <p className="text-white px-3">Obligatory legal stuff:</p>
             <div
               data-aos-once="false"
               data-aos="fade-up"
-              className="flex gap-1 items-center flex-wrap"
+              className="flex gap-1 items-center flex-wrap px-3"
             >
               <button
                 onClick={() => handleTokenClick("token1", 4)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken4 === "token1"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
                 <div className="tokenPill">
-                  <img className="tokenimg" src={chain} alt="Token" />
+                  <img
+                    className="tokenimg"
+                    src={selectedToken4 === "token1" ? bluechain : chain}
+                    alt="Token"
+                  />
 
                   <span>Terms of Service</span>
                 </div>
@@ -295,40 +315,43 @@ function About() {
                 onClick={() => handleTokenClick("token2", 4)}
                 className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken4 === "token2"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
                 <div className="tokenPill">
-                  <img className="tokenimg" src={chain} alt="Token" />
+                  <img
+                    className="tokenimg"
+                    src={selectedToken4 === "token2" ? bluechain : chain}
+                    alt="Token"
+                  />
 
                   <span>Privacy Policy</span>
                 </div>
               </button>
             </div>
+            <div className="bubble-bottom mt-2">
+              {selectedToken4 === "token1" && (
+                <PreviewBox
+                  imageURL=""
+                  logoURL="https://typowebsitevideo.s3.amazonaws.com/blue+logo.svg"
+                  ItemURL="https://typo-public-documents.s3.amazonaws.com/TermsOfUse.html"
+                  websiteName="Terms of Service"
+                  description="Visit the link to read more."
+                />
+              )}
+
+              {selectedToken4 === "token2" && (
+                <PreviewBox
+                  imageURL=""
+                  logoURL="https://typowebsitevideo.s3.amazonaws.com/blue+logo.svg"
+                  ItemURL="https://typo-public-documents.s3.amazonaws.com/PrivacyPolicy.html"
+                  websiteName="Privacy Policy"
+                  description="Visit the link to read more."
+                />
+              )}
+            </div>
           </article>
-
-          <div className="bubble-bottom">
-            {selectedToken4 === "token1" && (
-              <PreviewBox
-                imageURL=""
-                logoURL="https://typowebsitevideo.s3.amazonaws.com/blue+logo.svg"
-                ItemURL="https://typo-public-documents.s3.amazonaws.com/TermsOfUse.html"
-                websiteName="Terms of Service"
-                description="Visit the link to read more."
-              />
-            )}
-
-            {selectedToken4 === "token2" && (
-              <PreviewBox
-                imageURL=""
-                logoURL="https://typowebsitevideo.s3.amazonaws.com/blue+logo.svg"
-                ItemURL="https://typo-public-documents.s3.amazonaws.com/PrivacyPolicy.html"
-                websiteName="Privacy Policy"
-                description="Visit the link to read more."
-              />
-            )}
-          </div>
         </div>
       </div>
 

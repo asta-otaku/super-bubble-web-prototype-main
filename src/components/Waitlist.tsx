@@ -35,7 +35,7 @@ function Waitlist({
           backgroundImage: `url(${subtract})`,
         }}
         onClick={() => setOpen(!open)}
-        className={`text-primary font-medium hover:text-secondary py-5 bg-cover bg-no-repeat bg-center w-[300px]`}
+        className={`text-primary font-medium hover:text-secondary bg-cover bg-no-repeat bg-center w-[300px] h-16`}
       >
         {open ? (
           <img src={back} className="-rotate-90 mx-auto" />

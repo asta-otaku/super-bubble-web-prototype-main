@@ -19,7 +19,10 @@ function App() {
 
   return (
     <div>
-      <div className={`pt-8 bg-white ${open && "blur-[2px]"}`}>
+      <div
+        onClick={() => setOpen(false)}
+        className={`pt-8 bg-white ${open && "blur-[2px]"}`}
+      >
         <Header />
         {/* Hero */}
         <div className="h-[800px] max-w-screen-2xl mx-auto flex flex-col items-center justify-center relative">
@@ -56,132 +59,196 @@ function App() {
         {/* Bubbles */}
         <div className="flex flex-col items-center justify-center p-4 h-[600px]">
           <div className="flex flex-col items-end max-w-[280px] w-full">
-            <article className="bg-secondary text-white text-[17px] p-3 rounded-2xl">
-              Hey what do you think of these cuts?
-              <button
-                onClick={() => setSelectedToken1("token1")}
-                className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
-                  selectedToken1 === "token1"
-                    ? "bg-gray-300 text-primary"
-                    : "bg-[#FFFFFF33] text-white"
-                }`}
-              >
-                <div className="tokenPill">
-                  <div className="thumbnail">
-                    <img
-                      src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                      alt="Token Thumbnail"
-                      className="thumbnailImg"
-                    ></img>
-                  </div>
+            <article className="bg-secondary text-white text-[17px] pt-3 rounded-2xl">
+              <div className="px-3">
+                Hey what do you think of these cuts?
+                <button
+                  onClick={() => setSelectedToken1("token1")}
+                  className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+                    selectedToken1 === "token1"
+                      ? "bg-gray-300 text-primary"
+                      : "bg-[#FFFFFF33] text-white"
+                  }`}
+                >
+                  <div className="tokenPill">
+                    <div className="thumbnail">
+                      <img
+                        src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                        alt="Token Thumbnail"
+                        className="thumbnailImg"
+                      ></img>
+                    </div>
 
-                  <span>video.mp4</span>
-                </div>
-              </button>
-              <button
-                onClick={() => setSelectedToken1("token2")}
-                className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
-                  selectedToken1 === "token2"
-                    ? "bg-gray-300 text-primary"
-                    : "bg-[#FFFFFF33] text-white"
-                }`}
-              >
-                <div className="tokenPill">
-                  <div className="thumbnail">
-                    <img
-                      src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                      alt="Token Thumbnail"
-                      className="thumbnailImg"
-                    ></img>
+                    <span>video.mp4</span>
                   </div>
+                </button>
+                <button
+                  onClick={() => setSelectedToken1("token2")}
+                  className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+                    selectedToken1 === "token2"
+                      ? "bg-gray-300 text-primary"
+                      : "bg-[#FFFFFF33] text-white"
+                  }`}
+                >
+                  <div className="tokenPill">
+                    <div className="thumbnail">
+                      <img
+                        src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                        alt="Token Thumbnail"
+                        className="thumbnailImg"
+                      ></img>
+                    </div>
 
-                  <span>video.mp4</span>
-                </div>
-              </button>{" "}
-              and here's the og script{" "}
-              <button
-                onClick={() => setSelectedToken1("token3")}
-                className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
-                  selectedToken1 === "token3"
-                    ? "bg-gray-300 text-primary"
-                    : "bg-[#FFFFFF33] text-white"
-                }`}
-              >
-                <div className="tokenPill">
-                  <div className="thumbnail">
-                    <img src={doc}></img>
+                    <span>video.mp4</span>
                   </div>
+                </button>{" "}
+                and here's the og script{" "}
+                <button
+                  onClick={() => setSelectedToken1("token3")}
+                  className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+                    selectedToken1 === "token3"
+                      ? "bg-gray-300 text-primary"
+                      : "bg-[#FFFFFF33] text-white"
+                  }`}
+                >
+                  <div className="tokenPill">
+                    <div className="thumbnail">
+                      <img src={doc}></img>
+                    </div>
 
-                  <span>doc.pdf</span>
-                </div>
-              </button>
-              <br />I think one of these thumbnails would work best{" "}
-              <button
-                onClick={() => setSelectedToken1("token4")}
-                className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
-                  selectedToken1 === "token4"
-                    ? "bg-gray-300 text-primary"
-                    : "bg-[#FFFFFF33] text-white"
-                }`}
-              >
-                <div className="tokenPill">
-                  <div className="thumbnail">
-                    <img
-                      src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                      alt="Token Thumbnail"
-                      className="thumbnailImg"
-                    ></img>
+                    <span>doc.pdf</span>
                   </div>
+                </button>
+                <br />I think one of these thumbnails would work best{" "}
+                <button
+                  onClick={() => setSelectedToken1("token4")}
+                  className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+                    selectedToken1 === "token4"
+                      ? "bg-gray-300 text-primary"
+                      : "bg-[#FFFFFF33] text-white"
+                  }`}
+                >
+                  <div className="tokenPill">
+                    <div className="thumbnail">
+                      <img
+                        src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                        alt="Token Thumbnail"
+                        className="thumbnailImg"
+                      ></img>
+                    </div>
 
-                  <span>thumbnail 1.jpg</span>
-                </div>
-              </button>
-              <button
-                onClick={() => setSelectedToken1("token5")}
-                className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
-                  selectedToken1 === "token5"
-                    ? "bg-gray-300 text-primary"
-                    : "bg-[#FFFFFF33] text-white"
-                }`}
-              >
-                <div className="tokenPill">
-                  <div className="thumbnail">
-                    <img
-                      src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                      alt="Token Thumbnail"
-                      className="thumbnailImg"
-                    ></img>
+                    <span>thumbnail 1.jpg</span>
                   </div>
+                </button>
+                <button
+                  onClick={() => setSelectedToken1("token5")}
+                  className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+                    selectedToken1 === "token5"
+                      ? "bg-gray-300 text-primary"
+                      : "bg-[#FFFFFF33] text-white"
+                  }`}
+                >
+                  <div className="tokenPill">
+                    <div className="thumbnail">
+                      <img
+                        src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                        alt="Token Thumbnail"
+                        className="thumbnailImg"
+                      ></img>
+                    </div>
 
-                  <span>thumbnail 2.jpg</span>
-                </div>
-              </button>
-              <button
-                onClick={() => setSelectedToken1("token6")}
-                className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
-                  selectedToken1 === "token6"
-                    ? "bg-gray-300 text-primary"
-                    : "bg-[#FFFFFF33] text-white"
-                }`}
-              >
-                <div className="tokenPill">
-                  <div className="thumbnail">
-                    <img
-                      src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                      alt="Token Thumbnail"
-                      className="thumbnailImg"
-                    ></img>
+                    <span>thumbnail 2.jpg</span>
                   </div>
+                </button>
+                <button
+                  onClick={() => setSelectedToken1("token6")}
+                  className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+                    selectedToken1 === "token6"
+                      ? "bg-gray-300 text-primary"
+                      : "bg-[#FFFFFF33] text-white"
+                  }`}
+                >
+                  <div className="tokenPill">
+                    <div className="thumbnail">
+                      <img
+                        src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                        alt="Token Thumbnail"
+                        className="thumbnailImg"
+                      ></img>
+                    </div>
 
-                  <span>thumbnail 3.jpg</span>
-                </div>
-              </button>
+                    <span>thumbnail 3.jpg</span>
+                  </div>
+                </button>
+              </div>
+              <div className="bubble-bottom mt-2">
+                {selectedToken1 === "token1" && (
+                  <img
+                    src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                    alt="Whiteboarding"
+                    style={{
+                      width: "100%",
+                      borderRadius: "16px",
+                    }}
+                  />
+                )}
+                {selectedToken1 === "token2" && (
+                  <img
+                    src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
+                    alt="Locked in"
+                    style={{
+                      width: "100%",
+                      borderRadius: "16px",
+                    }}
+                  />
+                )}
+                {selectedToken1 === "token3" && (
+                  <img
+                    src="https://typowebsitevideo.s3.amazonaws.com/offsite.webp"
+                    alt="Offsite"
+                    style={{
+                      width: "100%",
+                      borderRadius: "16px",
+                    }}
+                  />
+                )}
+                {selectedToken1 === "token4" && (
+                  <img
+                    src="https://typowebsitevideo.s3.amazonaws.com/candid.webp"
+                    alt="Candid"
+                    style={{
+                      width: "100%",
+                      borderRadius: "16px",
+                    }}
+                  />
+                )}
+                {selectedToken1 === "token5" && (
+                  <img
+                    src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                    alt="Whiteboarding"
+                    style={{
+                      width: "100%",
+                      borderRadius: "16px",
+                    }}
+                  />
+                )}
+                {selectedToken1 === "token6" && (
+                  <img
+                    src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
+                    alt="Locked in"
+                    style={{
+                      width: "100%",
+                      borderRadius: "16px",
+                    }}
+                  />
+                )}
+              </div>
             </article>
             <div
               style={{
                 backgroundImage: `url(${subtractinv})`,
               }}
-              className="flex justify-center items-center gap-3 bg-no-repeat bg-cover bg-center w-[180px] text-primary text-xs p-3 rounded-3xl"
+              className="flex justify-center items-center bg-no-repeat bg-cover bg-center w-[100px] h-8 mr-4 text-primary text-xs p-3"
             >
               <img src={message} alt="" />
             </div>
@@ -190,68 +257,6 @@ function App() {
             Meet your Super Bubble
           </h4>
           <p className="text-[#7E7E7E] font-medium text-xl">click around</p>
-          <div className="bubble-bottom max-w-[300px] mt-8 mb-20">
-            {selectedToken1 === "token1" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                alt="Whiteboarding"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token2" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
-                alt="Locked in"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token3" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/offsite.webp"
-                alt="Offsite"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token4" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/candid.webp"
-                alt="Candid"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token5" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                alt="Whiteboarding"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token6" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
-                alt="Locked in"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-          </div>
         </div>
 
         <div className="flex flex-col gap-[300px] w-full">

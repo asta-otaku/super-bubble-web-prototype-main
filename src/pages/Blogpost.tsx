@@ -11,7 +11,7 @@ function Blogpost() {
 
   return (
     <div className="pt-8 bg-white max-w-5xl w-full mx-auto min-h-screen grid grid-cols-1 md:grid-cols-3 gap-4">
-      <span className="font-mono text-xs hidden md:flex items-center justify-end text-[#7E7E7E]">
+      <span className="font-mono text-xs invisible md:visible flex items-center justify-end text-[#7E7E7E]">
         {post.author}
       </span>
 
@@ -45,7 +45,7 @@ function Blogpost() {
         ))}
       </div>
 
-      <span className="font-mono text-xs hidden md:flex items-center text-[#7E7E7E] mt-1">
+      <span className="font-mono text-xs invisible md:visible flex items-center text-[#7E7E7E] mt-1">
         {post.date}
       </span>
     </div>

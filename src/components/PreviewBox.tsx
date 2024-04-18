@@ -12,7 +12,7 @@ function PreviewBox({
   description?: string;
 }) {
   return (
-    <div className="flex max-w-xs w-full p-3 flex-col gap-3 rounded-2xl bg-white border border-solid border-[#1919191a]">
+    <div className="flex max-w-xs w-full p-3 flex-col gap-3 rounded-[14px] bg-white border border-solid border-[#1919191a]">
       <div className="flex justify-between items-center self-stretch gap-3">
         <div className="flex justify-between items-center self-stretch gap-3 flex-nowrap">
           {/* Logo */}

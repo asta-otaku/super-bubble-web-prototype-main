@@ -74,7 +74,10 @@ function Blog() {
   const [open, setOpen] = useState(false);
   return (
     <div>
-      <div className={`pt-8 bg-white ${open && "blur-[2px]"}`}>
+      <div
+        onClick={() => setOpen(false)}
+        className={`pt-8 bg-white ${open && "blur-[2px]"}`}
+      >
         <Header />
         <div className="px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[calc(80vh)]">
           {blogPosts.map((post) => (
@@ -93,7 +96,7 @@ function Blog() {
               <span
                 className={`text-[#7E7E7E] font-mono text-xs ${
                   hovered[post.id]
-                    ? "hidden md:flex items-center justify-end"
+                    ? "invisible md:visible flex items-center justify-end"
                     : "hidden"
                 }`}
               >
@@ -112,7 +115,9 @@ function Blog() {
               </div>
               <span
                 className={`text-[#7E7E7E] font-mono text-xs ${
-                  hovered[post.id] ? "hidden md:flex items-center" : "hidden"
+                  hovered[post.id]
+                    ? "invisible md:visible flex items-center"
+                    : "hidden"
                 }`}
               >
                 {post.date}

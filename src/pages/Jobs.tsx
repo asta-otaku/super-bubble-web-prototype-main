@@ -48,26 +48,31 @@ function Jobs() {
 
   return (
     <div>
-      <div className={`pt-8 bg-white ${open && "blur-[2px]"}`}>
+      <div
+        onClick={() => setOpen(false)}
+        className={`pt-8 bg-white ${open && "blur-[2px]"}`}
+      >
         <Header />
         <div className="max-w-xs w-full px-3 mx-auto flex flex-col gap-3 pt-8">
           <p className="bg-secondary text-white p-3 rounded-2xl">
             If you're excited by our vision to reshape communication for
             creation then we want to hear from you
           </p>
-          <article className="bg-secondary text-white p-3 rounded-2xl">
-            We work together IRL in Soho, NYC. Our office doubles as an art
-            studio, film set, and all-round creative space <br />
+          <article className="bg-secondary pt-3 rounded-2xl">
+            <p className="text-white px-3">
+              We work together IRL in Soho, NYC. Our office doubles as an art
+              studio, film set, and all-round creative space
+            </p>
             <div
               data-aos-once="false"
               data-aos="fade-up"
-              className="flex gap-1 items-center flex-wrap"
+              className="flex gap-1 items-center flex-wrap px-3"
             >
               <button
                 onClick={() => handleTokenClick("token1", 1)}
                 className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token1"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -87,7 +92,7 @@ function Jobs() {
                 onClick={() => handleTokenClick("token2", 1)}
                 className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token2"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -107,7 +112,7 @@ function Jobs() {
                 onClick={() => handleTokenClick("token3", 1)}
                 className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token3"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -127,7 +132,7 @@ function Jobs() {
                 onClick={() => handleTokenClick("token4", 1)}
                 className={`inline-flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
                   selectedToken1 === "token4"
-                    ? "bg-gray-300 text-primary"
+                    ? "bg-white text-primary"
                     : "bg-[#FFFFFF33] text-white"
                 }`}
               >
@@ -144,65 +149,66 @@ function Jobs() {
                 </div>
               </button>
             </div>
+            <div className="bubble-bottom mt-2">
+              {selectedToken1 === "token1" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
+                  alt="Whiteboarding"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+              {selectedToken1 === "token2" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
+                  alt="Locked in"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+              {selectedToken1 === "token3" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/offsite.webp"
+                  alt="Offsite"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+              {selectedToken1 === "token4" && (
+                <img
+                  src="https://typowebsitevideo.s3.amazonaws.com/candid.webp"
+                  alt="Candid"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                  }}
+                />
+              )}
+            </div>
           </article>
-          <div className="bubble-bottom">
-            {selectedToken1 === "token1" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/whiteboarding.webp "
-                alt="Whiteboarding"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token2" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/lockedin.webp"
-                alt="Locked in"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token3" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/offsite.webp"
-                alt="Offsite"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-            {selectedToken1 === "token4" && (
-              <img
-                src="https://typowebsitevideo.s3.amazonaws.com/candid.webp"
-                alt="Candid"
-                style={{
-                  width: "100%",
-                  borderRadius: "16px",
-                }}
-              />
-            )}
-          </div>
 
           <p className="bg-secondary text-white p-3 rounded-2xl">
             In order to assemble the best team, we raised over $6m in seed
             funding from Elad Gil, Gokul Rajaram, Sarah Guo, and the leaders of
             companies like Figma, Adobe, and Plaid
           </p>
-          <p className="bg-secondary text-white p-3 rounded-2xl">
-            If you're interested in working with us please fill out this form:{" "}
-            <br />
+          <article className="bg-secondary pt-3 rounded-2xl">
+            <p className="text-white px-3">
+              If you're interested in working with us please fill out this form:
+            </p>
             <button
               data-aos-once="false"
               data-aos="fade-up"
               onClick={() => handleTokenClick("token1", 3)}
-              className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+              className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ml-3 ${
                 selectedToken3 === "token1"
-                  ? "bg-gray-300 text-primary"
+                  ? "bg-white text-primary"
                   : "bg-[#FFFFFF33] text-white"
               }`}
             >
@@ -212,29 +218,32 @@ function Jobs() {
                 <span>Typeform.com</span>
               </div>
             </button>
-          </p>
-          <div className="bubble-bottom">
-            {selectedToken3 === "token1" && (
-              <PreviewBox
-                imageURL=""
-                // logoURL="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
-                ItemURL="https://www.typeform.com/tyyyyyyyyyyypo/"
-                websiteName="Typo* on Typeform"
-                description="A more ~editorial~ pov"
-              />
-            )}
-          </div>
-          <p className="bg-secondary text-white p-3 rounded-2xl">
-            We are recruiting across product roles, but are most actively hiring
-            an iOS engineer. You can find out more about that position here:{" "}
-            <br />
+            <div className="bubble-bottom mt-3">
+              {selectedToken3 === "token1" && (
+                <PreviewBox
+                  imageURL=""
+                  // logoURL="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
+                  ItemURL="https://www.typeform.com/tyyyyyyyyyyypo/"
+                  websiteName="Typo* on Typeform"
+                  description="A more ~editorial~ pov"
+                />
+              )}
+            </div>
+          </article>
+
+          <article className="bg-secondary pt-3 rounded-2xl">
+            <p className="text-white px-3">
+              We are recruiting across product roles, but are most actively
+              hiring an iOS engineer. You can find out more about that position
+              here:
+            </p>
             <button
               data-aos-once="false"
               data-aos="fade-up"
               onClick={() => handleTokenClick("token1", 4)}
-              className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ${
+              className={`flex items-center gap-0.5 text-xs py-1 px-2 rounded-3xl w-fit cursor-pointer ml-3 ${
                 selectedToken4 === "token1"
-                  ? "bg-gray-300 text-primary"
+                  ? "bg-white text-primary"
                   : "bg-[#FFFFFF33] text-white"
               }`}
             >
@@ -244,18 +253,19 @@ function Jobs() {
                 <span>Notion.so</span>
               </div>
             </button>
-          </p>
-          <div className="bubble-bottom">
-            {selectedToken4 === "token1" && (
-              <PreviewBox
-                imageURL=""
-                // logoURL="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
-                ItemURL="https://www.notion.so/tyyyyyyyyyyypo/"
-                websiteName="Typo* on Notion"
-                description="A more ~editorial~ pov"
-              />
-            )}
-          </div>
+            <div className="bubble-bottom mt-2">
+              {selectedToken4 === "token1" && (
+                <PreviewBox
+                  imageURL=""
+                  // logoURL="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png"
+                  ItemURL="https://www.notion.so/tyyyyyyyyyyypo/"
+                  websiteName="Typo* on Notion"
+                  description="A more ~editorial~ pov"
+                />
+              )}
+            </div>
+          </article>
+
           <p className="bg-secondary text-white p-3 rounded-2xl">
             And if you don't fit the exact experience requirements, it's still
             worth applying. We want to work with the best, and the best come in
