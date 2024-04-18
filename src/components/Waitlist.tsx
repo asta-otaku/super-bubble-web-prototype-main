@@ -91,7 +91,7 @@ function Waitlist({
                 3: (
                   <>
                     <div className="flex gap-3 items-center">
-                      <select className="rounded-3xl bg-white p-2 px-4 appearance-none w-1/4 text-primary placeholder:text-primary outline-none">
+                      <select className="rounded-3xl bg-white p-2 px-4 appearance-none w-[120px] md:w-1/4 text-primary placeholder:text-primary outline-none">
                         <option value="+1">🇺🇸 +1</option>
                         <option value="+1CA">🇨🇦 +1</option>
                         <option value="+44">🇬🇧 +44</option>
