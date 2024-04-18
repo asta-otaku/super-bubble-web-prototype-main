@@ -71,50 +71,58 @@ function Blog() {
   const navigate = useNavigate();
   const [hovered, setHovered] = useState<{ [key: string]: boolean }>({});
 
+  const [open, setOpen] = useState(false);
   return (
-    <div className="pt-8 bg-white">
-      <Header />
-      <div className="px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[calc(80vh)]">
-        {blogPosts.map((post) => (
-          <div
-            key={post.id}
-            className={`grid ${
-              hovered[post.id] ? "grid-cols-3" : "grid-cols-1"
-            } gap-2 max-w-fit mx-auto`}
-            onMouseEnter={() =>
-              setHovered((prev) => ({ ...prev, [post.id]: true }))
-            }
-            onMouseLeave={() =>
-              setHovered((prev) => ({ ...prev, [post.id]: false }))
-            }
-          >
-            <span
-              className={`text-right mt-8 text-[#7E7E7E] font-mono text-xs ${
-                hovered[post.id] ? "hidden md:block" : "hidden"
-              }`}
-            >
-              {post.author}
-            </span>
+    <div>
+      <div className={`pt-8 bg-white ${open && "blur-[2px]"}`}>
+        <Header />
+        <div className="px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[calc(80vh)]">
+          {blogPosts.map((post) => (
             <div
-              onClick={() => navigate(`/blog/${post.id}`, { state: { post } })}
-              className="max-w-xs w-full flex flex-col gap-3 p-3 rounded-2xl border border-solid border-[#F3F3F3] hover:bg-[#F3F3F3] cursor-pointer"
+              key={post.id}
+              className={`grid ${
+                hovered[post.id] ? "grid-cols-3" : "grid-cols-1"
+              } gap-2 max-w-fit mx-auto`}
+              onMouseEnter={() =>
+                setHovered((prev) => ({ ...prev, [post.id]: true }))
+              }
+              onMouseLeave={() =>
+                setHovered((prev) => ({ ...prev, [post.id]: false }))
+              }
             >
-              <h1 className="font-medium text-secondary">{post.title}</h1>
-              <p className="font-mono text-[#7E7E7E] text-xs line-clamp-1">
-                {post.content[0]}
-              </p>
+              <span
+                className={`text-[#7E7E7E] font-mono text-xs ${
+                  hovered[post.id]
+                    ? "hidden md:flex items-center justify-end"
+                    : "hidden"
+                }`}
+              >
+                {post.author}
+              </span>
+              <div
+                onClick={() =>
+                  navigate(`/blog/${post.id}`, { state: { post } })
+                }
+                className="max-w-xs w-full flex flex-col gap-3 p-3 rounded-2xl border border-solid border-[#F3F3F3] hover:bg-[#F3F3F3] cursor-pointer"
+              >
+                <h1 className="font-medium text-secondary">{post.title}</h1>
+                <p className="font-mono text-[#7E7E7E] text-xs line-clamp-1">
+                  {post.content[0]}
+                </p>
+              </div>
+              <span
+                className={`text-[#7E7E7E] font-mono text-xs ${
+                  hovered[post.id] ? "hidden md:flex items-center" : "hidden"
+                }`}
+              >
+                {post.date}
+              </span>
             </div>
-            <span
-              className={`mt-8 text-[#7E7E7E] font-mono text-xs ${
-                hovered[post.id] ? "hidden md:block" : "hidden"
-              }`}
-            >
-              {post.date}
-            </span>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-      <Waitlist />
+
+      <Waitlist open={open} setOpen={setOpen} />
     </div>
   );
 }

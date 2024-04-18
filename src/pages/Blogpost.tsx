@@ -10,7 +10,11 @@ function Blogpost() {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <div className="pt-8 bg-white max-w-screen w-full min-h-screen flex justify-center">
+    <div className="pt-8 bg-white max-w-5xl w-full mx-auto min-h-screen grid grid-cols-1 md:grid-cols-3 gap-4">
+      <span className="font-mono text-xs hidden md:flex items-center justify-end text-[#7E7E7E]">
+        {post.author}
+      </span>
+
       <div className="max-w-sm p-4 w-full">
         <button
           onMouseEnter={() => setHovered(true)}
@@ -25,11 +29,11 @@ function Blogpost() {
         </button>
         <div className="mt-4">
           <h1 className="text-xl text-secondary font-bold">{post?.title}</h1>
-          <div className="flex justify-between items-center w-full">
-            <span className="font-mono text-xs md:hidden text-[#7E7E7E] mt-1">
+          <div className="flex justify-between items-center w-full md:hidden">
+            <span className="font-mono text-xs text-[#7E7E7E] mt-1">
               {post.author}
             </span>
-            <span className="font-mono text-xs md:hidden text-[#7E7E7E] mt-1">
+            <span className="font-mono text-xs text-[#7E7E7E] mt-1">
               {post.date}
             </span>
           </div>
@@ -40,6 +44,10 @@ function Blogpost() {
           </p>
         ))}
       </div>
+
+      <span className="font-mono text-xs hidden md:flex items-center text-[#7E7E7E] mt-1">
+        {post.date}
+      </span>
     </div>
   );
 }
