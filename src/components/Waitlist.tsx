@@ -1,6 +1,6 @@
 import { useState } from "react";
 import back from "../assets/back.svg";
-// import subtract from "../assets/Subtract.svg";
+import sub from "./sub.svg";
 import { LeftIcon, RightIcon } from "../assets/icons";
 
 const questions = [
@@ -32,7 +32,7 @@ function Waitlist({
     >
       <button
         style={{
-          backgroundImage: `url(../assets/Subtract.svg)`,
+          backgroundImage: `url(${sub})`,
         }}
         onClick={() => setOpen(!open)}
         className={`text-primary font-medium hover:text-secondary bg-cover bg-no-repeat bg-center w-[300px] h-16`}

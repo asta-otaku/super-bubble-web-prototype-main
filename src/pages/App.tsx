@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import logo from "../assets/logo.svg";
 import back from "../assets/back.svg";
 import doc from "../assets/doc.svg";
-import subtractinv from "../assets/SubtractInv.svg";
+import subinv from "../assets/SubtractInv.svg";
 import message from "../assets/message4.svg";
 import mockone from "../assets/mock-one.svg";
 import mocktwo from "../assets/mock-two.svg";
@@ -246,7 +246,7 @@ function App() {
             </article>
             <div
               style={{
-                backgroundImage: `url(${subtractinv})`,
+                backgroundImage: `url(${subinv})`,
               }}
               className="flex justify-center items-center bg-no-repeat bg-cover bg-center w-[100px] h-8 mr-4 text-primary text-xs p-3"
             >
