@@ -54,7 +54,7 @@ function About() {
         className={`pt-8 bg-white ${open && "blur-[2px]"}`}
       >
         <Header />
-        <div className="max-w-xs w-full px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[calc(80vh)]">
+        <div className="max-w-xs w-full px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[100vh]">
           <article className="bg-secondary pt-3 rounded-2xl">
             <p className="text-white px-3">
               We're a small team of crafts people who believe art and technology

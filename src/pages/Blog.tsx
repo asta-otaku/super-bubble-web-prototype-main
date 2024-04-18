@@ -79,7 +79,7 @@ function Blog() {
         className={`pt-8 bg-white ${open && "blur-[2px]"}`}
       >
         <Header />
-        <div className="px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[calc(80vh)]">
+        <div className="px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[100vh]">
           {blogPosts.map((post) => (
             <div
               key={post.id}

@@ -53,7 +53,7 @@ function Jobs() {
         className={`pt-8 bg-white ${open && "blur-[2px]"}`}
       >
         <Header />
-        <div className="max-w-xs w-full px-3 mx-auto flex flex-col gap-3 pt-8">
+        <div className="max-w-xs w-full px-3 mx-auto flex flex-col gap-3 pt-8 min-h-[100vh]">
           <p className="bg-secondary text-white p-3 rounded-2xl">
             If you're excited by our vision to reshape communication for
             creation then we want to hear from you

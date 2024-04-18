@@ -326,11 +326,11 @@ function App() {
             <div className="flex gap-8 w-full justify-center">
               <img
                 src={footermock}
-                className="h-[600px] hidden md:inline-block"
+                className="h-0 md:h-[600px] invisible md:visible"
               />
               <img
                 src={mockfour}
-                className="h-[600px] hidden md:inline-block"
+                className="h-0 md:h-[600px] invisible md:visible"
               />
               <img src={footermockmobile} className="md:hidden w-full" />
             </div>

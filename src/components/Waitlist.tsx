@@ -44,8 +44,8 @@ function Waitlist({
         )}
       </button>
       {open && (
-        <div className="bg-[#F6F6F6] w-full pt-8 p-4">
-          <div className="max-w-sm w-full mx-auto flex flex-col items-center gap-4">
+        <div className="bg-[#F6F6F6] w-full pt-8 p-4 min-h-[80vh] flex justify-center items-center md:min-h-fit">
+          <div className="max-w-sm w-full mx-auto flex flex-col -mt-24 md:mt-0 items-center gap-4 px-2">
             <p className="text-[#7E7E7E] font-medium">
               Question {step} of {questions.length}
             </p>
