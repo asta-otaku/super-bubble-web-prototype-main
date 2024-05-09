@@ -84,7 +84,7 @@ function Blog() {
             <div
               key={post.id}
               className={`grid ${
-                hovered[post.id] ? "grid-cols-3" : "grid-cols-1"
+                hovered[post.id] ? "grid-cols-1 md:grid-cols-3" : "grid-cols-1"
               } gap-2 max-w-fit mx-auto`}
               onMouseEnter={() =>
                 setHovered((prev) => ({ ...prev, [post.id]: true }))
